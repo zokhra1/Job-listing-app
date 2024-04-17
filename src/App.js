@@ -16,7 +16,7 @@ const addFilterKeywords=(data)=>{
 }
 
 const deleteKeyword=(data)=>{
-  const newKeywords=filterKeywords.filter((key)=>key!= data);
+  const newKeywords=filterKeywords.filter((key)=>key!== data);
   setFilterKeywords(newKeywords);
 }
 

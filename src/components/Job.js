@@ -6,7 +6,7 @@ export default function Job(props) {
     company,
     contract,
     featured,
-    id,
+  
     languages,
     level,
     location,
@@ -21,14 +21,14 @@ export default function Job(props) {
 
   const [icon, setIcon] = useState("");
 
-  const importSvgs = () => {
-    const logoSvg = import(`${logo}`).then((d) => {
-      setIcon(d.default);
-    });
-  };
+ 
 
   useEffect(() => {
-    importSvgs();
+    
+      import(`${logo}`).then((d) => {
+       setIcon(d.default);
+     });
+   
   }, [logo]);
 
   return (

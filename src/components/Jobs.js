@@ -6,7 +6,10 @@ export default function Jobs({ data, setKeywords, keywords }) {
 
 const [filterData,setfilteredData]=useState([]);
 
-const modifiedData =()=>{
+
+
+useEffect(()=>{
+  
   if(keywords.length>0){
 
 const newData= filterData.filter(d=>{
@@ -25,11 +28,8 @@ setfilteredData(newData);
   }else{
     setfilteredData(data);
   }
-}
 
-useEffect(()=>{
-  modifiedData()
-}, [keywords]);
+}, [data,keywords,filterData]);
 
   return (
     <div className="jobs">
